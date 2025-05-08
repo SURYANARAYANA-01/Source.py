@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load dataset (make sure to upload it to /content/)
-df = pd.read_csv("/content/imdb_top_1000.csv")
+df = pd.read_csv("https://github.com/SURYANARAYANA-01/Source.py/blob/main/imdb_top_1000.csv")
 df['combined'] = df['Genre'].fillna('') + " " + df['Director'].fillna('') + " " + df['Overview'].fillna('')
 vectorizer = TfidfVectorizer(stop_words='english')
 tfidf_matrix = vectorizer.fit_transform(df['combined'])
