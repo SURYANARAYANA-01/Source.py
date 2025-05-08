@@ -1,8 +1,4 @@
-#Step 1: Install packages
-
-!pip install flask-ngrok flask pandas scikit-learn --quiet
-
-#Step 2: Run the AI Movie Matchmaker App
+#Step 1: Run the AI Movie Matchmaker App
 
 import pandas as pd
 from flask import Flask, request, jsonify
