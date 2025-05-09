@@ -131,7 +131,7 @@ def filter_by_preferences(recommendations, preferences):
     """
     if preferences['genres']:
         genre_mask = recommendations['Genre'].apply(
-            lambda x: any(genre in x for genre in preferences['genres'])
+            lambda x: any(genre in x for genre in preferences['genres']))
         recommendations = recommendations[genre_mask]
     
     if preferences['directors']:
